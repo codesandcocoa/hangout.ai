@@ -84,26 +84,30 @@ public class MainActivity extends AppCompatActivity {
                             "rec_dict = json.loads(str(res.hits[0]))\n print(\"Restaurant name: \" + rec_dict[\"name\"]\n";
 
                     String final_ip = beg + query + end;
-                    ProcessBuilder processBuilder = new ProcessBuilder("python -c \"" + final_ip + "\"");
-
-                    String op = "";
-                    Process p = null;
+          /*          Process process = null;
                     try {
-                        p = processBuilder.start();
-                        p.waitFor();
-                    } catch (IOException | InterruptedException e) {
+                         process = Runtime.getRuntime().exec("python -c \"" + final_ip + "\"");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }*/
+                    final_ip = "python -c \"" + final_ip + "\"";
+                   ProcessBuilder processBuilder = new ProcessBuilder("python3","/home/techwizzie/AndroidStudioProjects/hangoutai/notebooks/aito_test.py");
+                    String op = "";
+
+                    try {
+                        Process process = processBuilder.start();
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                        String line = "";
+
+                        while ((line = reader.readLine()) != null) {
+                            System.out.println(line);
+                            op += line;
+                        }
+
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
-                    String line = "";
-                    while (true) {
-                        try {
-                            if (!((line = bfr.readLine()) != null)) break;
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        op += line;
-                    }
+
                     Intent cIntent = new Intent(MainActivity.this, RecommenderActivity.class);
                     cIntent.putExtra("result" , op);
                     startActivity(cIntent);
