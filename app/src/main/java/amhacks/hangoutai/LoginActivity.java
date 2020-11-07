@@ -13,6 +13,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText EmailET, PasswordET;
     private Button LoginButton;
     private FirebaseAuth mAuth;
+    private ImageView mailView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,15 @@ public class LoginActivity extends AppCompatActivity {
         EmailET = (EditText) findViewById(R.id.login_email_et);
         PasswordET = (EditText) findViewById(R.id.login_pass_et);
         LoginButton = (Button) findViewById(R.id.login_button);
+        mailView = (ImageView) findViewById(R.id.mail_btn);
+
+        mailView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cIntent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(cIntent);
+            }
+        });
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
