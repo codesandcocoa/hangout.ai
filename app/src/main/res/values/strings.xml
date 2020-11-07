@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">hangout.ai</string>
     <array name="cuisine">
+        <item>Cuisine</item>
         <item>Afghan</item>
         <item>African</item>
         <item>American</item>
@@ -63,6 +64,7 @@
         <item>Vietnamese</item>
     </array>
     <array name="payment">
+        <item>Payment method</item>
         <item>cash</item>
         <item>bank_debit_cards</item>
         <item>MasterCard-Eurocard</item>
@@ -70,31 +72,31 @@
         <item>American_Express</item>
     </array>
     <array name="budget">
+        <item>Budget</item>
         <item>medium</item>
         <item>low</item>
         <item>high</item>
     </array>
     <array name="ambiance">
+        <item>Ambiance</item>
         <item>family</item>
         <item>friends</item>
         <item>solitary</item>
     </array>
-    <array name="drink_level">
-        <item>abstemious</item>
-        <item>social drinker</item>
-        <item>casual drinker</item>
-    </array>
     <array name="transport">
+        <item>Transport</item>
         <item>on foot</item>
         <item>public</item>
         <item>car owner</item>
     </array>
     <array name="alcohol">
+        <item>Alcohol</item>
         <item>No_Alcohol_Served</item>
         <item>Wine_Beer</item>
         <item>Full_Bar</item>
     </array>
     <array name="parking">
+        <item>Parking</item>
         <item>public</item>
         <item>none</item>
         <item>yes</item>

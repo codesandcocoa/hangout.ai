@@ -92,18 +92,6 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/drinklevelSpinner"
-                    android:layout_width="250dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:entries="@array/drink_level"
-                    android:popupElevation="10dp"
-                    android:dropDownWidth="250dp"
-                    android:padding="5dp"
-                    android:background="@drawable/input_style1"
-                    android:dropDownSelector="@drawable/down_icon"
-                    />
-                <Spinner
                     android:id="@+id/transportSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
