@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "849744277422",
+    "firebase_url": "https://hangout-99be4.firebaseio.com",
+    "project_id": "hangout-99be4",
+    "storage_bucket": "hangout-99be4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849744277422:android:85c48b1f7835f53e54623f",
+        "android_client_info": {
+          "package_name": "amhacks.hangoutai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849744277422-gffjstdeb2evmradb286dc87g8pl20vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAeky-xxC2R850KizE5dmdodyCgA7KtQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849744277422-gffjstdeb2evmradb286dc87g8pl20vg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

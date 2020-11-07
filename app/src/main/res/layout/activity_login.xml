@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/eiffel_2"
+    android:background="@drawable/paris_cafe"
     >
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -56,6 +56,7 @@
                 />
 
             <Button
+                android:id="@+id/login_button"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
                 android:background="@drawable/btn_style1"
