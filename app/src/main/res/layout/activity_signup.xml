@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    tools:context=".SignupActivity"
+    android:background="@drawable/paris_cafe"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="12dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/signup_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signup"
+                android:padding="10dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/signup_email_et"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:hint="Email address"
+                android:padding="8dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/input_style1"
+                />
+            <EditText
+                android:id="@+id/signup_pass_et"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:padding="8dp"
+                android:inputType="textPassword"
+                android:background="@drawable/input_style1"
+                />
+            <EditText
+                android:id="@+id/signup_conf_pass_et"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:hint="Confirm Password"
+                android:padding="8dp"
+                android:inputType="textPassword"
+                android:background="@drawable/input_style1"
+                />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_style1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="SIGNUP"
+                android:backgroundTint="@android:color/holo_red_light"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
