@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">hangout.ai</string>
+    <array name="sample">
+        <item>Success</item>
+        <item>Failure</item>
+    </array>
 </resources>

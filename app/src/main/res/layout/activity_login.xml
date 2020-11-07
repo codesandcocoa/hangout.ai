@@ -13,6 +13,7 @@
         android:layout_centerInParent="true"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
+        android:alpha="0.9"
         >
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Login"
+                android:textColor="@android:color/holo_red_light"
                 android:padding="10dp"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -38,6 +40,8 @@
                 android:layout_width="280dp"
                 android:layout_height="50dp"
                 android:hint="Email address"
+                android:textStyle="bold"
+                android:textColor="@android:color/darker_gray"
                 android:padding="8dp"
                 android:inputType="textEmailAddress"
                 android:background="@drawable/input_style1"
@@ -50,6 +54,8 @@
                 android:layout_width="280dp"
                 android:layout_height="50dp"
                 android:hint="Password"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
                 android:padding="8dp"
                 android:inputType="textPassword"
                 android:background="@drawable/input_style1"
@@ -64,6 +70,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:text="LOGIN"
+                android:alpha="1"
                 android:backgroundTint="@android:color/holo_red_light"
                 />
             <TextView
