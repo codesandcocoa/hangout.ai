@@ -84,19 +84,14 @@ public class MainActivity extends AppCompatActivity {
                             "rec_dict = json.loads(str(res.hits[0]))\n print(\"Restaurant name: \" + rec_dict[\"name\"]\n";
 
                     String final_ip = beg + query + end;
-
                     ProcessBuilder processBuilder = new ProcessBuilder("python -c \"" + final_ip + "\"");
 
                     String op = "";
                     Process p = null;
                     try {
                         p = processBuilder.start();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
                         p.waitFor();
-                    } catch (InterruptedException e) {
+                    } catch (IOException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
