@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RecommenderActivity extends AppCompatActivity {
 
@@ -14,9 +15,10 @@ public class RecommenderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommender);
 
-        opText = (TextView) findViewById(R.id.opp);
+      /*  opText = (TextView) findViewById(R.id.opp);
         String res = getIntent().getStringExtra("result");
         opText.setText(res);
+        Toast.makeText(this, "OP: " + res, Toast.LENGTH_SHORT).show();*/
 
     }
 }

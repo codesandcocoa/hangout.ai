@@ -56,21 +56,22 @@ public class MainActivity extends AppCompatActivity {
                 else
                 {
                     String query = "";
-                    query = "rec_query = { \"from\":\"ratings\"\"where\": {\n" +
+                    query = "rec_query = { \"from\":\"ratings\",\"where\": {\n" +
                             "        \"userID\": {\n" +
                             "            \"cuisine\": \"" + cuisine + "\", \n" +
-                            "            \"payment\": \""+ payment + "\"\n" +
-                            "            \"budget\": \""+ budget + "\"\n" +
-                            "            \"ambiance\": \""+ ambiance + "\"\n" +
-                            "            \"transport\": \""+ transport + "\"\n" +
-                            "            \"alcohol\": \""+ alcohol + "\"\n" +
+                            "            \"payment\": \""+ payment + "\",\n" +
+                            "            \"budget\": \""+ budget + "\",\n" +
+                            "            \"ambiance\": \""+ ambiance + "\",\n" +
+                            "            \"transport\": \""+ transport + "\",\n" +
+                            "            \"alcohol\": \""+ alcohol + "\",\n" +
                             "            \"parking_lot\": \""+ parking + "\"\n" +
                             "        }\n" +
                             "    },\n" +
                             "    \"recommend\": \"placeID\",\n" +
                             "    \"goal\": {\"rating\": 2}";
 
-                    String beg = "from aito.schema import AitoStringType, AitoTextType, AitoDelimiterAnalyzerSchema, AitoTableSchema, AitoColumnLinkSchema, AitoDatabaseSchema\n" +
+                    String beg = "!pip install aitoai=0.4.0\n" +
+                            "from aito.schema import AitoStringType, AitoTextType, AitoDelimiterAnalyzerSchema, AitoTableSchema, AitoColumnLinkSchema, AitoDatabaseSchema\n" +
                             "from aito.client import AitoClient\n" +
                             "import aito.api as aito_api\n" +
                             "import json\n" +
@@ -84,14 +85,23 @@ public class MainActivity extends AppCompatActivity {
                             "rec_dict = json.loads(str(res.hits[0]))\n print(\"Restaurant name: \" + rec_dict[\"name\"]\n";
 
                     String final_ip = beg + query + end;
-          /*          Process process = null;
+                    Process process;
+                    String op ="";
                     try {
                          process = Runtime.getRuntime().exec("python -c \"" + final_ip + "\"");
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                        String line = "";
+
+                        while ((line = reader.readLine()) != null) {
+                            System.out.println(line);
+                            op += line;
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }*/
-                    final_ip = "python -c \"" + final_ip + "\"";
-                   ProcessBuilder processBuilder = new ProcessBuilder("python3","/home/techwizzie/AndroidStudioProjects/hangoutai/notebooks/aito_test.py");
+                    }
+
+                 //   final_ip = "python -c \"" + final_ip + "\"";
+                   /*ProcessBuilder processBuilder = new ProcessBuilder("python","/home/techwizzie/AndroidStudioProjects/hangoutai/notebooks/aito_test.py");
                     String op = "";
 
                     try {
@@ -106,7 +116,68 @@ public class MainActivity extends AppCompatActivity {
 
                     } catch (IOException e) {
                         e.printStackTrace();
+                    }*/
+                 /*   String op = "";
+                    String command =
+                            "curl -X POST \\\n" +
+                                    "  https://recommender.aito.app/api/v1/_recommend \\\n" +
+                                    "  -H 'content-type: application/json' \\\n" +
+                                    "  -H 'x-api-key: 8l2T7nRxqy1kyydH7fiqf5H65TjHit5T6G8S1wFr' \\\n" +
+                                    "  -d '\n" +
+                                    "  {\n" +
+                                    "    \"from\": \"ratings\",\n" +
+                                    "    \"where\": {  \"userID\": {\n" +
+                                    "            \"cuisine\": \"" + cuisine + "\", \n" +
+                                    "            \"payment\": \""+ payment + "\"\n" +
+                                    "            \"budget\": \""+ budget + "\"\n" +
+                                    "            \"ambiance\": \""+ ambiance + "\"\n" +
+                                    "            \"transport\": \""+ transport + "\"\n" +
+                                    "            \"alcohol\": \""+ alcohol + "\"\n" +
+                                    "            \"parking_lot\": \""+ parking + "\"\n" +
+                                    "        } },\n" +
+                                    "        \"recommend\": \"placeID\",\n" +
+                                    "    \"goal\": {\"rating\": 2}\n" +
+                                    "  }'";
+
+                    Process proc = null;
+                    System.out.println(command);
+                    try {
+                        proc = Runtime.getRuntime().exec(command);
+                        BufferedReader reader =
+                                new BufferedReader(new InputStreamReader(proc.getInputStream()));
+                        String line = "";
+                        while((line = reader.readLine()) != null) {
+                            System.out.print(line + "\n");
+                            op = op + line;
+                        }
+                        proc.waitFor();
+
+                    } catch (IOException | InterruptedException e) {
+                        e.printStackTrace();
+                    }*/
+
+                    // Read the output
+
+
+
+
+
+                 /*
+                    ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
+                    Process process = null;
+                    String line = "";
+                    try {
+                        process = processBuilder.start();
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+                        while ((line = reader.readLine()) != null) {
+                            System.out.println(line);
+                            op += line;
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
+*/
 
                     Intent cIntent = new Intent(MainActivity.this, RecommenderActivity.class);
                     cIntent.putExtra("result" , op);
