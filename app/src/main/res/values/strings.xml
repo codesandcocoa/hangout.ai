@@ -1,7 +1,106 @@
 <resources>
     <string name="app_name">hangout.ai</string>
-    <array name="sample">
-        <item>Success</item>
-        <item>Failure</item>
+    <array name="cuisine">
+        <item>Afghan</item>
+        <item>African</item>
+        <item>American</item>
+        <item>Armenian</item>
+        <item>Asian</item>
+        <item>Bagels</item>
+        <item>Bakery</item>
+        <item>Bar</item>
+        <item>Bar_Pub_Brewery</item>
+        <item>Barbecue</item>
+        <item>Brazilian</item>
+        <item>Breakfast-Brunch</item>
+        <item>Burgers</item>
+        <item>Cafe-Coffee_Shop</item>
+        <item>Cafeteria</item>
+        <item>California</item>
+        <item>Caribbean</item>
+        <item>Chinese</item>
+        <item>Contemporary</item>
+        <item>Continental-European</item>
+        <item>Deli-Sandwiches</item>
+        <item>Dessert-Ice_Cream</item>
+        <item>Diner</item>
+        <item>Dutch-Belgian</item>
+        <item>Eastern_European</item>
+        <item>Ethiopian</item>
+        <item>Family</item>
+        <item>Fast_Food</item>
+        <item>Fine_Dining</item>
+        <item>French</item>
+        <item></item>
+        <item>Game</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Hot_Dogs</item>
+        <item>International</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Juice</item>
+        <item>Korean</item>
+        <item>Latin_American</item>
+        <item>Mediterranean</item>
+        <item>Mexican</item>
+        <item>Mongolian</item>
+        <item>Organic-Healthy</item>
+        <item>Persian</item>
+        <item>Pizzeria</item>
+        <item>Polish</item>
+        <item>Regional</item>
+        <item>Seafood</item>
+        <item>Soup</item>
+        <item>Southern</item>
+        <item>Southwestern</item>
+        <item>Spanish</item>
+        <item>Steaks</item>
+        <item>Sushi</item>
+        <item>Thai</item>
+        <item>Turkish</item>
+        <item>Vegetarian</item>
+        <item>Vietnamese</item>
+    </array>
+    <array name="payment">
+        <item>cash</item>
+        <item>bank_debit_cards</item>
+        <item>MasterCard-Eurocard</item>
+        <item>VISA</item>
+        <item>American_Express</item>
+    </array>
+    <array name="budget">
+        <item>medium</item>
+        <item>low</item>
+        <item>high</item>
+    </array>
+    <array name="ambiance">
+        <item>family</item>
+        <item>friends</item>
+        <item>solitary</item>
+    </array>
+    <array name="drink_level">
+        <item>abstemious</item>
+        <item>social drinker</item>
+        <item>casual drinker</item>
+    </array>
+    <array name="transport">
+        <item>on foot</item>
+        <item>public</item>
+        <item>car owner</item>
+    </array>
+    <array name="alcohol">
+        <item>No_Alcohol_Served</item>
+        <item>Wine_Beer</item>
+        <item>Full_Bar</item>
+    </array>
+    <array name="parking">
+        <item>public</item>
+        <item>none</item>
+        <item>yes</item>
+        <item>valet_parking</item>
+        <item>free</item>
+        <item>street</item>
+        <item>validated_parking</item>
     </array>
 </resources>

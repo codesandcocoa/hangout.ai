@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/eiffel_2"
+    android:background="@drawable/cafe_water"
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,12 +13,13 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
+            android:alpha="0.95"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -43,11 +44,11 @@
                     android:src="@drawable/masked_waitress"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/cuisineSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/cuisine"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -55,11 +56,11 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/paymentSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/payment"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -67,11 +68,11 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/budgetSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/budget"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -79,11 +80,11 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/ambianceSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/ambiance"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -91,11 +92,11 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/drinklevelSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/drink_level"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -103,11 +104,11 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/transportSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/transport"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -115,11 +116,11 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/alcoholSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/alcohol"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
@@ -127,16 +128,25 @@
                     android:dropDownSelector="@drawable/down_icon"
                     />
                 <Spinner
-                    android:id="@+id/firstSpinner"
+                    android:id="@+id/parkingSpinner"
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/sample"
+                    android:entries="@array/parking"
                     android:popupElevation="10dp"
                     android:dropDownWidth="250dp"
                     android:padding="5dp"
                     android:background="@drawable/input_style1"
                     android:dropDownSelector="@drawable/down_icon"
+                    />
+                <Button
+                    android:id="@+id/find_restaurants_btn"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_style1"
+                    android:text="FIND RESTAURANTS"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
                     />
 
             </LinearLayout>
