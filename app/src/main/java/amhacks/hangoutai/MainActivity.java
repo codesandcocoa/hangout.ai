@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
 
     Spinner cuisineSpinner, paymentSpinner, budgetSpinner, ambianceSpinner, transSpinner, alcoholSpinner, parkSpinner;
-    String cuisine, payment, budget, ambiance, transport, alcohol, parking;
+    String cuisine, payment, budget, ambiance, transport, alcohol, parking = " ";
     Button predictButton;
 
 

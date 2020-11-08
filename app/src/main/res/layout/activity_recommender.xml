@@ -35,7 +35,7 @@
             <ImageView
                 android:layout_width="260dp"
                 android:layout_height="150dp"
-                android:src="@drawable/masked_waitress"
+                android:src="@drawable/ic_hotel"
                 android:layout_marginTop="10dp"
                 />
             <TextView
@@ -99,6 +99,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ambience: Family"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good for groups"
+
+                android:id="@+id/is_good_for_groups"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Covid safety: unknown"
                 android:textStyle="bold"
                 android:padding="5dp"
                 android:layout_marginLeft="10dp"
